@@ -28,7 +28,7 @@ public class GameManager : MonoBehaviour
         Player1Score++;
         Player1Text.GetComponent<TextMeshProUGUI>().text = Player1Score.ToString();
         ResetPosition();
-        Ball.GetComponent<BallMovement>().Reset();
+        Ball.GetComponent<BallMovement>().Reset(true);
     }
 
     public void Player2Scored()
@@ -36,24 +36,12 @@ public class GameManager : MonoBehaviour
         Player2Score++;
         Player2Text.GetComponent<TextMeshProUGUI>().text = Player2Score.ToString();
         ResetPosition();
-        Ball.GetComponent<BallMovement>().Reset();
+        Ball.GetComponent<BallMovement>().Reset(false);
     }
 
     private void ResetPosition()
     {
         Player1.transform.position = Player1.GetComponent<Move>().startPosition;
         Player2.transform.position = Player2.GetComponent<Move>().startPosition;
-    }
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 }

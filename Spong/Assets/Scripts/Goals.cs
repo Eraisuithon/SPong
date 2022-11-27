@@ -8,7 +8,6 @@ public class Goals : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        Debug.Log("GOT HIT!");
         if (collision.gameObject.CompareTag("Ball"))
         {
             if (!isPlayer1Goal)
@@ -21,7 +20,6 @@ public class Goals : MonoBehaviour
                 Debug.Log("Player 2 Scored...");
                 GameObject.Find("GameManager").GetComponent<GameManager>().Player2Scored();
             }
-
         }
     }
 }
