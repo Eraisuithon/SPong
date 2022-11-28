@@ -41,7 +41,7 @@ public class GameManager : MonoBehaviour
 
     private void ResetPosition()
     {
-        Player1.transform.position = Player1.GetComponent<Move>().startPosition;
-        Player2.transform.position = Player2.GetComponent<Move>().startPosition;
+        Player1.GetComponent<Move>().Reset();
+        Player2.GetComponent<Move>().Reset();
     }
 }
